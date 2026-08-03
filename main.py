@@ -82,7 +82,8 @@ def main():
                 t = sf.x[-1]
             predicted_time.append(t)
         risk = joblib_model.predict(input_data)
-        threshold = np.median(risk)
+        threshold = 23.286096350408855
+        print("Predicted Risk:", threshold)
         predicted_group = (risk > threshold).astype(int)
 
         results=pd.DataFrame()
